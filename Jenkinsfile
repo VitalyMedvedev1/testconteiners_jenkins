@@ -1,12 +1,10 @@
 pipeline {
+
     agent {
-        node {
-            label 'TestNode'
-        }
+        node { label 'TestNode' }
     }
 
     options {
-        ansiColor('xterm')
         timestamps()
         disableConcurrentBuilds()
         timeout(time: 1, unit: 'HOURS')
