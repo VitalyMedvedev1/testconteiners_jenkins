@@ -1,8 +1,6 @@
 pipeline {
 
-    agent {
-        node { label 'TestNode' }
-    }
+    agent any
 
     options {
         timestamps()
