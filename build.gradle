@@ -115,5 +115,5 @@ task testFlyway(type: Test) {
 }
 
 task testPrint(type: Test){
-    println "111"
+    println "ETO TEST VITALY"
 }
