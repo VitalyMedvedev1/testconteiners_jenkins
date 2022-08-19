@@ -14,6 +14,7 @@ pipeline {
     }
 
     stages {
+
         // Извлекаем проект из Bitbucket
         stage('Checkout') {
             steps {
@@ -28,12 +29,15 @@ pipeline {
                 checkout scm
             }
         }
+
         // Собираем проект. Получаем на выходе пакетный файл AUDIT_Import_ALL.ispac
         stage('Build') {
             echo 'BUILD STAGE'
-            sh("chmod 755 ./gradlew testPrint")
+
+            sh ("chmod 755 ./gradlew testPrint")
         }
+
         // Загружаем архив с проектом на удаленный сервер. Деплоим его на MS SQL Server
-        stage('Deploy') { }
+        //stage('Deploy') { }
     }
 }
