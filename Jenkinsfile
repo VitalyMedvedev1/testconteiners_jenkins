@@ -31,7 +31,7 @@ pipeline {
             steps {
                 echo 'BUILD STAGE'
 
-                sh("chmod 755 ./gradlew testPrint")
+                sh("chmod 755 ./gradlew clean build")
             }
         }
 
