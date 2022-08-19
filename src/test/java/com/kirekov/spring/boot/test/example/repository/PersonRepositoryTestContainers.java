@@ -6,6 +6,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import com.kirekov.spring.boot.test.example.entity.Person;
 import java.util.Set;
+
+import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -22,6 +24,7 @@ import org.testcontainers.junit.jupiter.Testcontainers;
 @AutoConfigureTestDatabase(replace = Replace.NONE)
 @DisplayName("PersonRepository: findAllLastNames tests with PostgreSQL Testcontainers instance")
 @Tag(TEST_CONTAINERS_TAG)
+@Slf4j
 class PersonRepositoryTestContainers {
 
   @Autowired
@@ -30,12 +33,12 @@ class PersonRepositoryTestContainers {
   @Test
   @DisplayName("Should return all last names")
   void shouldReturnAlLastNames() {
-    System.out.println("NACHAL_!");
+    log.info("\n\n\nNACHALLLLLLL\n\n\n");
     personRepository.saveAndFlush(new Person().setFirstName("John").setLastName("Brown"));
     personRepository.saveAndFlush(new Person().setFirstName("Kyle").setLastName("Green"));
     personRepository.saveAndFlush(new Person().setFirstName("Paul").setLastName("Brown"));
 
-    System.out.println("ENDINGGGGGG!");
+    log.info("\n\n\nENDDDDDDDDDDDDDDDDD\n\n\n");
     assertEquals(Set.of("Brown", "Green"), personRepository.findAllLastNames());
   }
 }
