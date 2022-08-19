@@ -31,12 +31,11 @@ pipeline {
             steps {
                 echo 'BUILD STAGE'
 
-                dir("folder") {
-                    sh "pwd"
-                }
+                sh "pwd"
 
-                sh("./gradlew")
-                sh("chmod 755 ./gradlew clean build")
+                bat 'gradlew'
+
+                bat 'gradlew clean build'
             }
         }
 
