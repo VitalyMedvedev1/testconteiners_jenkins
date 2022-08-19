@@ -30,10 +30,12 @@ class PersonRepositoryTestContainers {
   @Test
   @DisplayName("Should return all last names")
   void shouldReturnAlLastNames() {
+    System.out.println("NACHAL_!");
     personRepository.saveAndFlush(new Person().setFirstName("John").setLastName("Brown"));
     personRepository.saveAndFlush(new Person().setFirstName("Kyle").setLastName("Green"));
     personRepository.saveAndFlush(new Person().setFirstName("Paul").setLastName("Brown"));
 
+    System.out.println("ENDINGGGGGG!");
     assertEquals(Set.of("Brown", "Green"), personRepository.findAllLastNames());
   }
 }
