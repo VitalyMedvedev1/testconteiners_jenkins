@@ -31,6 +31,7 @@ pipeline {
             steps {
                 echo 'BUILD STAGE'
 
+                sh("./gradlew")
                 sh("chmod 755 ./gradlew clean build")
             }
         }
