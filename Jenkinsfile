@@ -30,7 +30,6 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'BUILD STAGE'
-
                 sh "pwd"
 
                 bat 'gradlew'
