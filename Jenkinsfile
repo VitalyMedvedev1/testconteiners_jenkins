@@ -30,8 +30,11 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'BUILD STAGE'
-                def pwd = sh("pwd")
-                echo pwd
+
+                dir("folder") {
+                    sh "pwd"
+                }
+
                 sh("./gradlew")
                 sh("chmod 755 ./gradlew clean build")
             }
