@@ -1,10 +1,11 @@
 spring:
   datasource:
-    url: jdbc:tc:postgresql:9.6.8:///test_database
+    url: jdbc:tc:postgresql:13.3:///test_database
     username: user
     password: password
   jpa:
     hibernate:
       ddl-auto: create-drop
+    show-sql: true
   flyway:
     enabled: false
