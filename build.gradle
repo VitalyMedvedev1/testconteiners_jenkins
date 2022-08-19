@@ -115,8 +115,8 @@ task testFlyway(type: Test) {
 }
 
 task testTC(type: Test){
-    println "ETO TEST TC"
     useJUnitPlatform {
+        println "ETO TEST TC"
         includeTags "test-containers"
     }
 }
