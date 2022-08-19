@@ -34,6 +34,7 @@ class PersonRepositoryTestContainers {
   @DisplayName("Should return all last names")
   void shouldReturnAlLastNames() {
     log.info("\n\n\nNACHALLLLLLL\n\n\n");
+    System.out.println("\n\n\n!!!!!!!!!!!!!!!!!!!!!!!!\n\n\n");
     personRepository.saveAndFlush(new Person().setFirstName("John").setLastName("Brown"));
     personRepository.saveAndFlush(new Person().setFirstName("Kyle").setLastName("Green"));
     personRepository.saveAndFlush(new Person().setFirstName("Paul").setLastName("Brown"));
