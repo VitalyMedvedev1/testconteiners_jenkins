@@ -81,7 +81,7 @@ dependencyManagement {
 
 test {
     useJUnitPlatform {
-        excludeTags "test-containers", "flyway"
+        excludeTags "test-containers", "flyway", "testTC"
     }
     testLogging {
         showStandardStreams = true
@@ -114,6 +114,9 @@ task testFlyway(type: Test) {
     shouldRunAfter testFlyway
 }
 
-task testPrint(type: Test){
-    println "ETO TEST VITALY"
+task testTC(type: Test){
+    println "ETO TEST TC"
+    useJUnitPlatform {
+        includeTags "test-containers"
+    }
 }
