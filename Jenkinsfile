@@ -35,7 +35,7 @@ pipeline {
                 bat 'gradlew'
 
                 bat 'gradlew clean build'
-                bat 'gradlew testPrint'
+                bat 'gradlew testTC'
             }
         }
 
